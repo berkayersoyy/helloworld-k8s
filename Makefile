@@ -3,16 +3,16 @@ run:
 	$(info Running)
 	go run main.go
 
-.PHONY: deploy-k8s
-deploy-k8s:
-	chmod +x ./scripts/UndeployKubernetes.sh
-	./scripts/DeployKubernetes.sh
-prerequisites: deploy-k8s
+.PHONY: run-k8s
+run-k8s:
+	chmod +x ./scripts/RunKubernetes.sh
+	./scripts/RunKubernetes.sh
+prerequisites: run-k8s
 target: prerequisites
 
-.PHONY: undeploy-k8s
-undeploy-k8s:
-	chmod +x ./scripts/UndeployKubernetes.sh
-	./scripts/UndeployKubernetes.sh
-prerequisites: undeploy-k8s
+.PHONY: stop-k8s
+stop-k8s:
+	chmod +x ./scripts/StopKubernetes.sh
+	./scripts/StopKubernetes.sh
+prerequisites: stop-k8s
 target: prerequisites
