@@ -13,7 +13,7 @@ spec:
         app: helloworld-k8s
     spec:
       containers:
-        - name: berkayersoyy/helloworld-k8s
+        - name: helloworld-k8s-container
           image: berkayersoyy/helloworld-k8s
           resources:
             limits:
