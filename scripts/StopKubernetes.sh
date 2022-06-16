@@ -1,4 +1,4 @@
-echo "Running undeploy"
+echo "Stopping k8s"
 
 echo "Deleting deployments"
 kubectl delete deployments helloworld-k8s

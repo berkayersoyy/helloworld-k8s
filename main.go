@@ -7,11 +7,12 @@ import (
 )
 
 func helloWorld(w http.ResponseWriter, r *http.Request) {
+	log.Println("Hello world :)")
 	fmt.Fprintf(w, "Hello World :)")
 }
 
 func homePage(w http.ResponseWriter, r *http.Request) {
-	fmt.Fprintf(w, "Welcome to the HomePage!")
+	fmt.Fprintf(w, "Welcome to the HomePage!!")
 }
 
 func handleRequests() {
