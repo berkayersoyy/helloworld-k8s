@@ -1,17 +1,17 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: helloworld-k8s
+  name: helloworld-k8s #deployment name
 spec:
-  replicas: 1
+  replicas: 1 #number of pods
   selector:
     matchLabels:
-      app: helloworld-k8s
+      app: helloworld-k8s #setting pods to name which matching the label(name)
   template:
     metadata:
       labels:
         app: helloworld-k8s
-    spec:
+    spec: #container definition
       containers:
         - name: helloworld-k8s-container
           image: berkayersoyy/helloworld-k8s
